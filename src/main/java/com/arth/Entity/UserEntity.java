@@ -1,4 +1,4 @@
-package com.arth.antity;
+package com.arth.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,9 +7,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="User")
+@Table(name="Users")
 public class UserEntity {
-
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer userId;
 	private String firstName;
 	private String lastName;
@@ -22,14 +24,10 @@ public class UserEntity {
 	private String city;
 	private String state;
 	private Integer otp;
-	
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 	public String getFirstName() {
@@ -62,10 +60,10 @@ public class UserEntity {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public int getContactNo() {
+	public Integer getContactNo() {
 		return contactNo;
 	}
-	public void setContactNo(int contactNo) {
+	public void setContactNo(Integer contactNo) {
 		this.contactNo = contactNo;
 	}
 	public String getDateOfBirth() {
@@ -92,13 +90,12 @@ public class UserEntity {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public int getOtp() {
+	public Integer getOtp() {
 		return otp;
 	}
-	public void setOtp(int otp) {
+	public void setOtp(Integer otp) {
 		this.otp = otp;
 	}
-	
 	
 	
 }

@@ -1,4 +1,4 @@
-package com.arth.antity;
+package com.arth.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,17 +7,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Course")
+@Table(name="Courses")
 public class CourseEntity {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer courseId;
 	private String name;
-	private Boolean active ;
+	private Boolean active;
 	private Integer totalSeats;
-	private String academicCycle;
 	private Integer paidSeats;
-	private Integer developmnetCost;
+	private String academicCycle;
+	private Integer developmentCost;
 	public Integer getCourseId() {
 		return courseId;
 	}
@@ -42,25 +43,24 @@ public class CourseEntity {
 	public void setTotalSeats(Integer totalSeats) {
 		this.totalSeats = totalSeats;
 	}
-	public String getAcademicCycle() {
-		return academicCycle;
-	}
-	public void setAcademicCycle(String academicCycle) {
-		this.academicCycle = academicCycle;
-	}
 	public Integer getPaidSeats() {
 		return paidSeats;
 	}
 	public void setPaidSeats(Integer paidSeats) {
 		this.paidSeats = paidSeats;
 	}
-	public Integer getDevelopmnetCost() {
-		return developmnetCost;
+	public String getAcademicCycle() {
+		return academicCycle;
 	}
-	public void setDevelopmnetCost(Integer developmnetCost) {
-		this.developmnetCost = developmnetCost;
+	public void setAcademicCycle(String academicCycle) {
+		this.academicCycle = academicCycle;
 	}
-	
+	public Integer getDevelopmentCost() {
+		return developmentCost;
+	}
+	public void setDevelopmentCost(Integer developmentCost) {
+		this.developmentCost = developmentCost;
+	}
 	
 	
 }

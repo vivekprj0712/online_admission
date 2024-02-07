@@ -1,5 +1,4 @@
-package com.arth.antity;
-
+package com.arth.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Role")
+@Table(name = "Role")
 public class RoleEntity {
 
 	@Id
@@ -18,7 +17,7 @@ public class RoleEntity {
 	public Integer getRoleId() {
 		return roleId;
 	}
-	public void setRoleId(int roleId) {
+	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
 	public String getRoleName() {
@@ -27,7 +26,5 @@ public class RoleEntity {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
-
-	
 	
 }
