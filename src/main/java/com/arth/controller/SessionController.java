@@ -35,14 +35,14 @@ public class SessionController {
 		return "Vivek";
 	}
 	
-	@PostMapping("/saveuser")   //if come a data by jsp then use PostMapping
-	public String saveuser(UserBean sb)
-	{
-		System.out.println(sb.getUserName());
-		System.out.println(sb.getEmail());
-		System.out.println(sb.getPassword());
-		System.out.println("Saveuser");
-		return "Home";
-	}
+//	@PostMapping("/saveuser")   //if come a data by jsp then use PostMapping
+//	public String saveuser(UserBean sb)
+//	{
+//		System.out.println(sb.getUserName());
+//		System.out.println(sb.getEmail());
+//		System.out.println(sb.getPassword());
+//		System.out.println("Saveuser");
+//		return "Home";
+//	}
 }
 

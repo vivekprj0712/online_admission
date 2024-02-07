@@ -24,6 +24,8 @@ public class UserEntity {
 	private String city;
 	private String state;
 	private Integer otp;
+	private Integer roleId;
+	
 	public Integer getUserId() {
 		return userId;
 	}
@@ -96,6 +98,13 @@ public class UserEntity {
 	public void setOtp(Integer otp) {
 		this.otp = otp;
 	}
+	public Integer getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+	
 	
 	
 }
