@@ -18,7 +18,7 @@ public class UserEntity {
 	private String email;
 	private String password;
 	private String gender;
-	private Integer contactNo;
+	private Long contactNo;
 	private String dateOfBirth;
 	private String address;
 	private String city;
@@ -62,10 +62,10 @@ public class UserEntity {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Integer getContactNo() {
+	public Long getContactNo() {
 		return contactNo;
 	}
-	public void setContactNo(Integer contactNo) {
+	public void setContactNo(Long contactNo) {
 		this.contactNo = contactNo;
 	}
 	public String getDateOfBirth() {

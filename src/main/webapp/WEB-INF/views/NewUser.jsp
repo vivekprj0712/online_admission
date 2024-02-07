@@ -18,15 +18,13 @@
  		Password:<input type = "password" name = "password">
  		<br>
  		Gender:&nbsp;Male<input type = "radio" name = "gender">
- 		FemalMale<input type = "radio" name = "gender">
+ 		FeMale<input type = "radio" name = "gender">
  		<br>
  		ContactNo:<input type = "number" name = "contactNo">
  		<br>
  		DateOfBirth:<input type = "date" name = "dateOfBirth">
  		<br>
- 		 Address:<textarea name="address"
-                      rows="5" cols="20">
-          </textarea>
+ 		 Address:<input type = "text" name="address">
  		<br>
  		City:<input type = "text" name = "city">
  		<br>
