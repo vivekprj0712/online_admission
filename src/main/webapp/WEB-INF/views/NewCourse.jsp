@@ -19,6 +19,10 @@
  		False<input type = "radio" name = "active">
  		<br>
  		
+ 		
+ 		MinimumQualification:<input type = "text" name = "minimumQualification">
+ 		<br>
+ 		
  		AcademicCycle:<input type = "text" name = "academicCycle">
  		<br>
  		

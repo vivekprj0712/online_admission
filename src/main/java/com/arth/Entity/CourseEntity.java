@@ -14,6 +14,7 @@ public class CourseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer courseId;
 	private String name;
+	private String minimumQualification;
 	private Boolean active;
 	private Integer totalSeats;
 	private Integer paidSeats;
@@ -61,6 +62,13 @@ public class CourseEntity {
 	public void setDevelopmentCost(Integer developmentCost) {
 		this.developmentCost = developmentCost;
 	}
+	public String getMinimumQualification() {
+		return minimumQualification;
+	}
+	public void setMinimumQualification(String minimumQualification) {
+		this.minimumQualification = minimumQualification;
+	}
+	
 	
 	
 }

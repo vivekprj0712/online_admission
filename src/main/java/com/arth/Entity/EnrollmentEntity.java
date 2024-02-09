@@ -16,7 +16,7 @@ public class EnrollmentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer enrollmentId;
 	private String date;
-	private Integer amount;
+	private Float amount;
 	private Integer transactionId;
 	private String remarks;
 	private Integer userId;
@@ -32,10 +32,10 @@ public class EnrollmentEntity {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public Integer getAmount() {
+	public Float getAmount() {
 		return amount;
 	}
-	public void setAmount(Integer amount) {
+	public void setAmount(Float amount) {
 		this.amount = amount;
 	}
 	public Integer getTransactionId() {

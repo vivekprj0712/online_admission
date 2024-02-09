@@ -1,7 +1,10 @@
 package com.arth.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -25,7 +28,17 @@ public class CourseController {
 	public String saveCourse(CourseEntity courseE)
 	{
 		courseRepo.save(courseE);
-		return "Home";
+		return "redirect:/listcourse";
 		
 	}
+	@GetMapping("/listcourse")
+	public String listCourse(Model model)
+	{
+		 List<CourseEntity> courses=courseRepo.findAll();
+		 model.addAttribute("courses", courses);
+		 return "ListCourse";
+	}
+	
+	
+	
 }
