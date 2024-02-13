@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.arth.Entity.RoleEntity;
 import com.arth.repository.RoleRepository;
@@ -40,4 +41,13 @@ public class RoleController {
 		model.addAttribute("roles", roles);
 		return "ListRole";  //jsp
 	}
+	
+	//delete
+	@GetMapping("/deleterole")
+	public String deleteRole(@RequestParam("roleId") Integer roleId)
+	{
+		roleRepo.deleteById(roleId);
+		return "redirect:/listrole"; 
+	}
+	
 }
