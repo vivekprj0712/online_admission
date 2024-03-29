@@ -26,10 +26,10 @@ public class RoleController {
 		return "NewRole";
 	}
 	@PostMapping("/saverole")
-	public String saveRole(RoleEntity roleE)
+	public String saveRole(RoleEntity re)
 	{
 		//Insert
-		roleRepo.save(roleE);
+		roleRepo.save(re);
 		return "redirect:/listrole"; //this will invoke method  ;
 	}
 	
@@ -50,4 +50,13 @@ public class RoleController {
 		return "redirect:/listrole"; 
 	}
 	
+	//edit
+		@GetMapping("/editrole")
+		public String editRole(@RequestParam("roleId") Integer roleId , Model model)
+		{
+			RoleEntity role = roleRepo.findById(roleId).get();
+			model.addAttribute("editRole", role);
+			
+			return "EditeRole"; 
+		}
 }

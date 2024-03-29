@@ -21,7 +21,6 @@
 	<br>
 	<br>
 	<input type = "submit" value="Add New Enrollmet">
-
 	
 	</form>
 </body>

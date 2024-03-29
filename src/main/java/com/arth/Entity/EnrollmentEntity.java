@@ -19,7 +19,7 @@ public class EnrollmentEntity {
 	private Float amount;
 	private Integer transactionId;
 	private String remarks;
-	private Integer userId;
+	private Integer studentId;
 	public Integer getEnrollmentId() {
 		return enrollmentId;
 	}
@@ -50,12 +50,13 @@ public class EnrollmentEntity {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-	public Integer getUserId() {
-		return userId;
+	public Integer getStudentId() {
+		return studentId;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setStudentId(Integer studentId) {
+		this.studentId = studentId;
 	}
+	
 	
 	
 	

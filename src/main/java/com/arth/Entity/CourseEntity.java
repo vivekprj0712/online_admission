@@ -13,24 +13,25 @@ public class CourseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer courseId;
-	private String name;
+	private String courseName;
 	private String minimumQualification;
 	private Boolean active;
 	private Integer totalSeats;
-	private Integer paidSeats;
 	private String academicCycle;
-	private Integer developmentCost;
+	private String duration;
+	private String developmentCost;
 	public Integer getCourseId() {
 		return courseId;
 	}
 	public void setCourseId(Integer courseId) {
 		this.courseId = courseId;
 	}
-	public String getName() {
-		return name;
+	
+	public String getCourseName() {
+		return courseName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 	public Boolean getActive() {
 		return active;
@@ -44,11 +45,12 @@ public class CourseEntity {
 	public void setTotalSeats(Integer totalSeats) {
 		this.totalSeats = totalSeats;
 	}
-	public Integer getPaidSeats() {
-		return paidSeats;
+	
+	public String getDuration() {
+		return duration;
 	}
-	public void setPaidSeats(Integer paidSeats) {
-		this.paidSeats = paidSeats;
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 	public String getAcademicCycle() {
 		return academicCycle;
@@ -56,10 +58,10 @@ public class CourseEntity {
 	public void setAcademicCycle(String academicCycle) {
 		this.academicCycle = academicCycle;
 	}
-	public Integer getDevelopmentCost() {
+	public String getDevelopmentCost() {
 		return developmentCost;
 	}
-	public void setDevelopmentCost(Integer developmentCost) {
+	public void setDevelopmentCost(String developmentCost) {
 		this.developmentCost = developmentCost;
 	}
 	public String getMinimumQualification() {

@@ -27,9 +27,9 @@ public class EnrollmentController {
 	
 	
 	@PostMapping("/saveenrollment")
-	public String saveEnrollment(EnrollmentEntity enrollmentE)
+	public String saveEnrollment(EnrollmentEntity ee)
 	{
-		enrollmentRepo.save(enrollmentE);
+		enrollmentRepo.save(ee);
 		
 		return "redirect:/listenrollment";
 	}

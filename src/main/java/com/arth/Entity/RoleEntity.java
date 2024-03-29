@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 public class RoleEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)  // auto generate
 	private Integer roleId;
 	private String roleName;
 	public Integer getRoleId() {
@@ -26,5 +26,7 @@ public class RoleEntity {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
+	
+	
 	
 }
