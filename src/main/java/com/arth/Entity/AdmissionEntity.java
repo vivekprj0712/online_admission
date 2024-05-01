@@ -28,8 +28,9 @@ public class AdmissionEntity {
 	private Float perc_12th;
 	private String marksheet_12th;
 	private String marksheet_10th;
-	private String courseName;
+	private String courseId;
 	private String photo;
+	private String status;//1
 	private Integer payment;
 	
 	public Integer getAdmissionId() {
@@ -141,11 +142,11 @@ public class AdmissionEntity {
 	public void setMarksheet_10th(String marksheet_10th) {
 		this.marksheet_10th = marksheet_10th;
 	}
-	public String getCourseName() {
-		return courseName;
+	public String getCourseId() {
+		return courseId;
 	}
-	public void setCourseName(String courseName) {
-		this.courseName = courseName;
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
 	}	
 	
 	public String getPhoto() {
@@ -153,6 +154,14 @@ public class AdmissionEntity {
 	}
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+	
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public Integer getPayment() {
 		return payment;

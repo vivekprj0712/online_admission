@@ -16,6 +16,9 @@ import com.arth.repository.RoleRepository;
 
 @Controller
 public class RoleController {
+	
+	int countRole = 0;
+	
 	@Autowired
 	RoleRepository roleRepo;
 	
@@ -30,6 +33,7 @@ public class RoleController {
 	{
 		//Insert
 		roleRepo.save(re);
+		countRole = countRole + 1;
 		return "redirect:/listrole"; //this will invoke method  ;
 	}
 	
@@ -38,7 +42,9 @@ public class RoleController {
 	{
 		List<RoleEntity> roles =  roleRepo.findAll();  // select * from roles;   
 
+		
 		model.addAttribute("roles", roles);
+		model.addAttribute("countRole", countRole);
 		return "ListRole";  //jsp
 	}
 	
@@ -48,7 +54,7 @@ public class RoleController {
 	{
 		roleRepo.deleteById(roleId);
 		return "redirect:/listrole"; 
-	}
+	}	
 	
 	//edit
 		@GetMapping("/editrole")
@@ -57,6 +63,15 @@ public class RoleController {
 			RoleEntity role = roleRepo.findById(roleId).get();
 			model.addAttribute("editRole", role);
 			
-			return "EditeRole"; 
+			return "EditRole"; 
+		}
+		
+		
+   //view
+		@GetMapping("/viewrole")
+		public String viewModule(@RequestParam("roleId") Integer roleId, Model model) {
+			RoleEntity roles = roleRepo.findById(roleId).get();
+			model.addAttribute("role", roles);
+			return "ViewRole";
 		}
 }

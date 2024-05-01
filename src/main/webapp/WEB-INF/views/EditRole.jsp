@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> COAT | Dashboard</title>
+<title>COAT | Edit Role</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -39,22 +43,20 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 	<div class="wrapper">
 
-
- 
-	<%@include file="AdminHeader.jsp" %>
+		<jsp:include page="AdminHeader.jsp"></jsp:include>
 
 		<jsp:include page="AdminSidebar.jsp"></jsp:include>
-		
-		
-		
+
+
+
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
-			<div class="content-header">
+			<section class="content-header">
 				<div class="container-fluid">
 					<div class="row mb-2">
-						<div class="col-sm-6">
-							<h1 class="m-0 text-dark">Dashboard</h1>
+						<div class="col-md-6">
+							<h1 class="m-0 text-dark">Edit Role</h1>
 						</div>
 						<!-- /.col -->
 						<div class="col-sm-6">
@@ -68,122 +70,56 @@
 					<!-- /.row -->
 				</div>
 				<!-- /.container-fluid -->
-			</div>
+			</section>
 			<!-- /.content-header -->
 
-			<!-- Main content -->
 			<section class="content">
 				<div class="container-fluid">
-					<!-- Small boxes (Stat box) -->
 					<div class="row">
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-info">
-								<div class="inner">
-									<h3>40</h3>
+						<div class="col-md-6">
 
-									<p>List Role</p>
+							<div class="card card-info">
+								<div class="card-header">
+									<h3 class="card-title">Edit Role</h3>
 								</div>
-								<div class="icon">
-									<i class="ion ion-bag"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								<!-- /.card-header -->
+								<!-- form start -->
+								<form class="form-horizontal" action="saverole" method="post">
+									<div class="card-body">
+
+										<div class="form-group row">
+											<label for="roleName" class="col-sm-2 col-form-label">Role Name</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="roleName"
+													placeholder="Role Name" name="roleName" value="${editRole.roleName}">
+											</div>
+										</div>
+
+
+										
+										
+										 
+										 <input type="hidden" name="roleId" value="${editRole.roleId}"/>
+
+
+									</div>
+
+
+
+									<!-- /.card-body -->
+									<div class="card-footer">
+										<button type="submit" class="btn btn-info">Update Role</button>
+										<a href="listrole" class="btn btn-default float-right">Cancel</a>
+										
+
+									</div>
+									<!-- /.card-footer -->
+								</form>
 							</div>
 						</div>
-						<!-- ./col -->
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-success">
-								<div class="inner">
-									<h3>
-										53<sup style="font-size: 20px">%</sup>
-									</h3>
-
-									<p>List Course</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-stats-bars"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-warning">
-								<div class="inner">
-									<h3>44</h3>
-
-									<p>Student Registrations</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-person-add"></i>
-								</div>
-								<a href="liststudent" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-danger">
-								<div class="inner">
-									<h3>44</h3>
-
-									<p>FeedBack</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-blue">
-								<div class="inner">
-									<h3>44</h3>
-
-									<p>List Contact</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
-						
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-purple">
-								<div class="inner">
-									<h3>44</h3>
-
-									<p>List Teacher</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
-						
 					</div>
-					<!-- /.row -->
-					<!-- Main row -->
-					<!-- /.row (main row) -->
 				</div>
-				<!-- /.container-fluid -->
 			</section>
-			<!-- /.content -->
 		</div>
 		<!-- /.content-wrapper -->
 		<jsp:include page="AdminFooter.jsp"></jsp:include>

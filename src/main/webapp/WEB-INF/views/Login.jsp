@@ -77,11 +77,11 @@
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control form-control-lg">
+                            <input type="email" id="email" name="email" class="form-control form-control-lg" required="required">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="form-control form-control-lg">
+                            <input type="password" id="password" name="password" class="form-control form-control-lg" required="required">
                         </div>
                     </div>
                     

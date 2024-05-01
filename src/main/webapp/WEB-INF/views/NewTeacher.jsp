@@ -90,7 +90,7 @@
 											<label for="teacherName" class="col-sm-3 col-form-label">TeacherName</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="teacherName"
-													placeholder="Teacher Name" name="teacherName">
+													placeholder="Teacher Name" name="teacherName" required="required">
 											</div>
 										</div>
 										
@@ -98,7 +98,7 @@
 											<label for="qualification" class="col-sm-4 col-form-label">Qualification</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="qualification"
-													placeholder="Qualification" name="qualification">
+													placeholder="Qualification" name="qualification" required="required">
 											</div>
 										</div>
 										
@@ -109,7 +109,7 @@
 											<label for="contactNo" class="col-sm-3	 col-form-label">ContactNo</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="contactNo"
-													placeholder="ContactNo" name="contactNo">
+													placeholder="ContactNo" name="contactNo" required="required">
 											</div>
 										</div>
 										
@@ -117,7 +117,7 @@
 											<label for="profileImage" class="col-sm-3 col-form-label">ProfileImage</label>
 											<div class="col-sm-10">
 												<input type="file"  id="profileImage"
-													 name="profileImage">
+													 name="profileImage" required="required">
 											</div>
 										</div>
 										

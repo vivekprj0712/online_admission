@@ -14,7 +14,7 @@
       <div class="container ">
         <div class="row align-items-center">
           <div class="col-lg-8 d-none d-lg-block">
-            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span>+91 99799 22497</a> 
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span>+91 99095 27011</a> 
             <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span>hod_computer@ngu.ac.in</a> 
           </div>
           <div class="col-lg-4 text-right">
@@ -60,6 +60,10 @@
                   <li>
                     <a href="newfeedback" class="nav-link text-left">FeedBack</a>
                   </li>
+                  <li>
+                    <a href="listmerit" class="nav-link text-left">Merit</a>
+                  </li>
+                  
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
 

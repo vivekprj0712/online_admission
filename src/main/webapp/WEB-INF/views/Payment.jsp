@@ -68,20 +68,37 @@
 
     <div class="site-section">
         <div class="container  mr-3">
-        <form action="checkpayment" method = "post">
+        <form action="generatereceipt"  method = "post">
             <div class="row">
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label class="text-black">Form Fees</label>
-                    <input type="number" name="payment" class="form-control form-control-lg" value="300" readonly="readonly">
-                </div>
-            </div>
-
+                     <input type="number" name="payment" class="form-control form-control-lg" value="300" readonly="readonly">
+                    </div>
+                    </div>
+                    		<input type="hidden" id="admissionId" name = "admissionId" class="form-control form-control-lg" value="${admissions.admissionId}">
+                            <input type="hidden" id="firstName" name = "firstName" class="form-control form-control-lg" value="${admissions.firstName}">
+                            <input type="hidden" id="middleName" name = "middleName" class="form-control form-control-lg" value="${admissions.middleName}">
+                            <input type="hidden" id="lastName" name = "lastName"  class="form-control form-control-lg" value="${admissions.lastName}">
+                            <input type="hidden" id="contactNo" name="contactNo" class="form-control form-control-lg" value="${admissions.contactNo}">                            
+                            <input type="hidden" id="email" name = "email" class="form-control form-control-lg" value="${admissions.email}">
+                         	<input type="hidden" id="category" name = "category" class="form-control form-control-lg" value="${admissions.category}">
+                            <input type="hidden" id="dob" name = "dob" class="form-control form-control-lg" value="${admissions.dob}">
+                        	<input type="hidden" id="gender" name = "gender" class="form-control form-control-lg" value="${admissions.gender}">
+                        	<input type="hidden" id="address" name = "address" class="form-control form-control-lg" value="${admissions.address}">
+                			<input type="hidden" id="city" name = "city" class="form-control form-control-lg" value="${admissions.city}">
+                            <input type="hidden" id="pincode" name="pinCode" class="form-control form-control-lg" value="${admissions.pinCode}">                            
+                            <input type="hidden" id="state" name = "state" class="form-control form-control-lg" value="${admissions.state}">
+                        	<input type="hidden" id="country" name = "country" class="form-control form-control-lg" value="${admissions.country}">
+                            <input type="hidden" id="perc10th" name = "perc_10th" class="form-control form-control-lg" value="${admissions.perc_10th}">
+                            <input type="hidden" id="perc12th" name = "perc_12th" class="form-control form-control-lg" value="${admissions.perc_12th}">
+                            <input type="hidden" id="marksheet10th" name = "marksheet_10th" class="form-control form-control-lg" value="${admissions.marksheet_10th}">
+                            <input type="hidden" id="marksheet12th" name = "marksheet_12th" class="form-control form-control-lg" value="${admissions.marksheet_12th}">
+                       	 	<input type="hidden" id="courseId" name = "courseId" class="form-control form-control-lg" value="${admissions.courseId}">
+                        	<input type="hidden" id="photo" name = "photo" class="form-control form-control-lg" value="${admissions.photo}">
+                        
             <div class="row">
-                <div class="col-2">
+                <div class="col-6">
                     <input type="submit" value="Pay" class="btn btn-primary btn-lg px-5 btn-center">
-                </div>
-                 <div class="col-3">
-                	<a href="newadmission" class="btn col-6 btn-danger btn-lg"> Cancel </a>
                 </div>
             </div>
             </form>

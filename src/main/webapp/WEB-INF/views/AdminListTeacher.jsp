@@ -84,13 +84,12 @@
 								<div class="inner">
 									<h3>${teacherList.size()}</h3>
 
-									<p>List Teacher</p>
+									<p>Teachers</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
+									<i class="ion ion-ios-people"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								
 							</div>
 						</div>
 						<!-- ./col -->
@@ -101,13 +100,13 @@
 					<section class="content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="card">
 								 								<div class="card-header">
 								 								<a href="newteacher">Add New Teacher</a></div>
  
 								<div class="card-body table-responsive p-0">
-									<table class="table table-hover text-nowrap">
+									<table class="table table-hover text-nowrap text-center">
 										<thead>
 											<tr>
 												<th>TeacherId</th>
@@ -126,8 +125,13 @@
 													<td>${t.teacherName}</td>
 													<td>${t.qualification}</td>
 													<td>${t.contactNo}</td>
-													<td><img src= '${t.profileImagePath}' alt="Image" class="img-fluid"></td>
-													<td><a href="deleteteacher?teacherId=${t.teacherId}">Delete</a></td>
+													<td><img src= '${t.profileImagePath}' alt="Image" class="img-fluid w-25"></td>
+													<td>
+													<a href="deleteteacher?teacherId=${t.teacherId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a>
+													<a href="editteacher?teacherId=${t.teacherId}"><i class="ion ion-ios-compose fa-2x ml-2 text-success"></i></a>
+													<a href="viewteacher?teacherId=${t.teacherId}"><i class="ion ion-ios-eye fa-2x ml-2 text-primary"></i></a>
+													
+													</td>
 													
 													
 												</tr>

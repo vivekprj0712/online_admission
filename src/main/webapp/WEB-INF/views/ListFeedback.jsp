@@ -61,7 +61,7 @@
 						<!-- /.col -->
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="admindashboard">Home</a></li>
 								<li class="breadcrumb-item active">List Contact</li>
 							</ol>
 						</div>
@@ -84,13 +84,12 @@
 								<div class="inner">
 									<h3>${feedbackList.size()}</h3>
 
-									<p>FeedBack</p>
+									<p>FeedBacks</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
+									<i class="ion ion-chatbox"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								
 							</div>
 						</div>
 						<!-- ./col -->
@@ -101,12 +100,12 @@
 					 	<section class="content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="card">
 								 					<div class="card-header">
 								 								
 								<div class="card-body table-responsive p-0">
-									<table class="table table-hover text-nowrap">
+									<table class="table table-hover text-nowrap text-center">
 										<thead>
 											<tr>
 												<th>FeedbackId</th>
@@ -124,12 +123,12 @@
 											<c:forEach items="${feedbackList}" var="ft">
 													<tr>
 														<td>${ft.feedbackId}</td>
-														<td>${ft.fName}</td>
-														<td>${ft.lName}</td>
+														<td>${ft.firstName}</td>
+														<td>${ft.lastName}</td>
 														<td>${ft.email}</td>
 														<td>${ft.subject}</td>
 														<td>${ft.message}</td>
-														<td><a href="deletefeedback?feedbackId=${ft.feedbackId}">Delete</a></td>
+														<td><a href="deletefeedback?feedbackId=${ft.feedbackId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a></td>
 													</tr>
 											</c:forEach>
 

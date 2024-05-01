@@ -66,27 +66,31 @@
 
     <div class="site-section">
         <div class="container">
-        <form action="feedback" method = "post">
+        <form action="savefeedback" method = "post">
             <div class="row">
-                <div class="col-md-12 form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control form-control-lg">
+               <div class="col-md-6 form-group">
+                    <label for="fName">First Name</label>
+                    <input type="text" id="fName" name="firstName" class="form-control form-control-lg" required="required">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="lName">Last Name</label>
+                    <input type="text" id="lName" name="lastName" class="form-control form-control-lg" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="eaddress">Email Address</label>
-                    <input type="text" id="eaddress" class="form-control form-control-lg">
+                    <input type="text" id="eaddress" name="email" class="form-control form-control-lg" required="required">
                 </div>
-                <div class="col-md-6 form-group">
-                    <label for="tel">Tel. Number</label>
-                    <input type="text" id="tel" class="form-control form-control-lg">
+                 <div class="col-md-6 form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control form-control-lg" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control" required="required"></textarea>
                 </div>
             </div>
 

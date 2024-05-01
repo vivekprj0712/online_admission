@@ -8,8 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.arth.Entity.CourseEntity;
+import com.arth.Entity.RoleEntity;
 import com.arth.repository.AdminRepository;
 import com.arth.repository.CourseRepository;
 import com.arth.repository.StudentRepository;
@@ -43,6 +45,7 @@ public class CourseController {
 		return "redirect:/listcourse";
 		
 	}
+	
 	@GetMapping("/listcourse")
 	public String listCourse(Model model , HttpSession session)
 	{
@@ -68,6 +71,32 @@ public class CourseController {
 			 return "ListCourse";
 	    }
    }
+	
+	
+	   //delete
+		@GetMapping("/deletecourse")
+		public String deleteCourse(@RequestParam("courseId") Integer courseId)
+		{
+			courseRepo.deleteById(courseId);
+			return "redirect:/listcourse"; 
+		}	
+		
+		//edit
+			@GetMapping("/editcourse")
+			public String edit(@RequestParam("courseId") Integer courseId , Model model)
+			{
+				CourseEntity courses = courseRepo.findById(courseId).get();
+				model.addAttribute("editCourse", courses);
+				return "EditCourse"; 
+			}
+			
+	   //view
+			@GetMapping("/viewcourse")
+			public String viewModule(@RequestParam("courseId") Integer courseId, Model model) {
+				CourseEntity courses = courseRepo.findById(courseId).get();
+				model.addAttribute("course", courses);
+				return "ViewCourse";
+			}
 	
 	
 }

@@ -91,7 +91,7 @@
 											<label for="courseName" class="col-sm-3 col-form-label">CourseName</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="courseName"
-													placeholder="Course Name" name="courseName">
+													placeholder="Course Name" name="courseName" required="required">
 											</div>
 										</div>
 										
@@ -99,7 +99,7 @@
 											<label for="minimumQualification" class="col-sm-4 col-form-label">MinimumQualification</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="minimumQualification"
-													placeholder="MinimumQualification" name="minimumQualification">
+													placeholder="MinimumQualification" name="minimumQualification" required="required">
 											</div>
 										</div>
 										
@@ -109,11 +109,11 @@
 										<label for="courseName" class="col-sm-2 col-form-label">Active</label>
 										
 										<div class="form-check form-check-inline">
-  												<input class="form-check-input" type="radio" name="active" id="activeYes" value="Yes">
+  												<input class="form-check-input" type="radio" name="active" id="activeYes" value="Yes" required="required">
   												<label class="form-check-label" for="activeYes">Yes</label>
 										</div>
 										<div class="form-check form-check-inline">
-												  <input class="form-check-input" type="radio" name="active" id="activeNo" value="No">
+												  <input class="form-check-input" type="radio" name="active" id="activeNo" value="No" required="required">
 												  <label class="form-check-label" for="activeNo">No</label>
 										</div>
 										</div>
@@ -121,7 +121,7 @@
 											<label for="academicCycle" class="col-sm-3	 col-form-label">AcademicCycle</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="inputEmail3"
-													placeholder="AcademicCycle" name="academicCycle">
+													placeholder="AcademicCycle" name="academicCycle" required="required">
 											</div>
 										</div>
 										
@@ -129,21 +129,21 @@
 											<label for="totalSeats" class="col-sm-3 col-form-label">Total Seats</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="totalSeats"
-													placeholder="Total Seats" name="totalSeats">
+													placeholder="Total Seats" name="totalSeats" required="required">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="duration" class="col-sm-3 col-form-label">Duration</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="duration"
-													placeholder="Duration" name="duration">
+													placeholder="Duration" name="duration" required="required">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="developmentCost" class="col-sm-3 col-form-label">DevelopmentCost</label>
 											<div class="col-sm-10">
 												<input type="text" class="form-control" id="developmentCost"
-													placeholder="DevelopmentCost" name="developmentCost">
+													placeholder="DevelopmentCost" name="developmentCost" required="required">
 											</div>
 										</div>
 										

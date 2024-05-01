@@ -8,16 +8,16 @@
 </head>
 <body>
 	<form action="saveadmin" method="post">
-		FirstName:<input type="text" name = "firstName">
+		FirstName:<input type="text" name = "firstName" required="required">
 		<br>
-		LastName:<input type="text" name = "lastName">
+		LastName:<input type="text" name = "lastName" required="required">
 		<br>
-		AdminEmail:<input type="email" name = "email">
+		AdminEmail:<input type="email" name = "email" required="required">
 		<br>
-		Password:<input type="password" name = "password">
+		Password:<input type="password" name = "password" required="required">
 		<br>
 		RoleId:<input type="text" name = "roleId">
-		<input type="submit" value="Save Admin">
+		<input type="submit" value="Save Admin" required="required">
 	</form>
 
 </body>

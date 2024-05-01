@@ -3,17 +3,11 @@
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Courses</title>
-</head>
-<body>
 <%--${courses.size()}--%>
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
-  <title>Academics &mdash; Website by Colorlib</title>
+  <meta charset="ISO-8859-1">
+  <title>Admission Form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -83,71 +77,70 @@
             </div>
           </div>
 	
-	
-			<form action="saveadmission" method = "post">
+			<form action="/saveadmission" enctype="multipart/form-data"  method = "post" >
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-6 form-group ">
                             <label for="firstName">FirstName</label>
-                            <input type="text" id="firstName" name = "firstName" class="form-control form-control-lg">
+                            <input type="text" id="firstName" name = "firstName" class="form-control form-control-lg" required="required">
                         </div>
                         <div class="col-md-6 form-group ">
                             <label for="middleName">MiddleName</label>
-                            <input type="text" id="middleName" name = "middleName" class="form-control form-control-lg">
+                            <input type="text" id="middleName" name = "middleName" class="form-control form-control-lg" required="required">
                         </div>
                          <div class="col-md-6 form-group ">
                             <label for="lastName">LastName</label>
-                            <input type="text" id="lastName" name = "lastName"  class="form-control form-control-lg">
+                            <input type="text" id="lastName" name = "lastName"  class="form-control form-control-lg" required="required">
                         </div>
 
                         <div class="col-md-6 form-group">
                             <label for="contactNo">ContactNo</label>
-                            <input type="text" id="contactNo" name="contactNo" class="form-control form-control-lg">                            
+                            <input type="text" id="contactNo" name="contactNo" class="form-control form-control-lg" required="required">                            
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name = "email" class="form-control form-control-lg">
+                            <input type="email" id="email" name = "email" class="form-control form-control-lg" required="required">
                         </div>
                         <div class="col-md-6 form-group dropdown has-children">
                         Select  Category
-                        <select class="dropdown-toggle ml-3" name="category">	
+                        <select class="dropdown-toggle ml-3" name="category" required="required">	
                         	 <option selected>--Select Category--</option>						
   							 <option value="general">GENERAL</option>
        						 <option value="obc">OBC</option>
        						 <option value="st">ST</option>
        						 <option value="sc">SC</option>
-       						 <option value="open">OPEN</option>	 
+       						
        					</select>						
                         </div>
                         
 										
                          <div class="col-md-6 form-group">
                             <label for="dob">Date Of Birth</label>
-                            <input type="date" id="dob" name = "dob" class="form-control form-control-lg">
+                            <input type="date" id="dob" name = "dob" class="form-control form-control-lg" required="required">
                         </div>
-                        <div class="form-group col-md-6 row">
+                        <div class="form-group col-md-6 row" >
 										<label for="gender" class="col-sm-2 col-form-label">Gender</label>
 										
 										<div class="form-check form-check-inline mt-3">
-  												<input class="form-check-input" type="radio" name="gender" id="male" value="male">
+  												<input class="form-check-input" type="radio" name="gender" id="male" value="male" required="required">
   												<label class="form-check-label" for="male">Male</label>
 										</div>
 										<div class="form-check form-check-inline mt-3">
-												  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+												  <input class="form-check-input" type="radio" name="gender" id="female" value="female" required="required">
 												  <label class="form-check-label" for="female">Female</label>
 										</div>
 						</div>
 						<div class="row">
                			 <div class="col-md-12 form-group ml-3">
                    				 <label for="address">Address</label>
-                			    <textarea  id="address" name = "address" cols="45" rows="5" class="form-control"></textarea>
+                			    <textarea  id="address" name = "address" cols="45" rows="5" class="form-control" required="required"></textarea>
                 		</div>
            			 </div>
            			 
            			 <div class="col-md-6 form-group dropdown has-children">
                         Select  City
-                        <select class="dropdown-toggle ml-3" name="city">	
+                        <select class="dropdown-toggle ml-3" name="city" required="required">	
                         	 <option selected>--Select City--</option>						
   							 <option value="patan">Patan</option>
        						 <option value="ahmedabad">Ahmedabad</option>
@@ -158,11 +151,11 @@
                         </div>
                          <div class="col-md-6 form-group">
                             <label for="pincode">Pincode</label>
-                            <input type="text" id="pincode" name="pinCode" class="form-control form-control-lg">                            
+                            <input type="text" id="pincode" name="pinCode" class="form-control form-control-lg" required="required">                            
                         </div>
                         <div class="col-md-6 form-group dropdown has-children">
                         Select  State
-                        <select class="dropdown-toggle ml-3" name="state">	
+                        <select class="dropdown-toggle ml-3" name="state" required="required">	
                         	 <option selected>--Select State--</option>						
   							 <option value="gujarat">Gujarat</option>
        						 <option value="rajasthan">Rajasthan</option>
@@ -173,7 +166,7 @@
                         </div>
                         <div class="col-md-6 form-group dropdown has-children">
                         Select Country
-                        <select class="dropdown-toggle ml-3" name="country">	
+                        <select class="dropdown-toggle ml-3" name="country" required="required">	
                         	 <option selected>--Select Country--</option>						
   							 <option value="india">India</option>
        						 <option value="usa">Usa</option>
@@ -184,37 +177,37 @@
                         </div>
                          <div class="col-md-6 form-group">
                             <label for="perc10th">10<sup>th</sup> Marks </label>
-                            <input type="text" id="perc10th" name = "perc_10th" class="form-control form-control-lg">
+                            <input type="text" id="perc10th" name = "perc_10th" class="form-control form-control-lg" required="required">
                         </div>
                          <div class="col-md-6 form-group">
                             <label for="perc12th">12<sup>th</sup> Marks </label>
-                            <input type="text" id="perc12th" name = "perc_12th" class="form-control form-control-lg">
+                            <input type="text" id="perc12th" name = "perc_12th" class="form-control form-control-lg" required="required">
                         </div>
                         
                           <div class="col-md-6 form-group">
-                            <label for="marksheet12th">12<sup>th</sup> MarkSheet</label>
-                            <input type="file" id="marksheet12th" name = "marksheet_12th" class="form-control form-control-lg">
+                            <label for="marksheet_12th">12<sup>th</sup> MarkSheet</label>
+                            <input type="file" id="marksheet_12th" name = "marksheet_12th_f" class="form-control form-control-lg" required="required" >
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="marksheet10th">10<sup>th</sup> MarkSheet</label>
-                            <input type="file" id="marksheet10th" name = "marksheet_10th" class="form-control form-control-lg">
+                            <label for="marksheet_10th">10<sup>th</sup> MarkSheet</label>
+                            <input type="file" id="marksheet_10th" name = "marksheet_10th_f" class="form-control form-control-lg" required="required" >
                         </div>
                         
                         <div class="col-md-6 form-group dropdown has-children">
                         Select  Course
-                        <select class="dropdown-toggle ml-3" name="courseName">	
+                        <select class="dropdown-toggle ml-3" name="courseId" required="required">	
                         	
-						<option> ---Select Course--- </option>			
+						<option>--Select Course--</option>			
 							<c:forEach items="${courseList}" var = "c">
-									<option value = "${c.courseName}">${c.courseName}</option>		
+									<option value = "${c.courseId}">${c.courseName}</option>		
 							</c:forEach>
 		
        					</select>						
                         </div>
                         
-                        <div class="col-md-6 form-group">
+                         <div class="col-md-6 form-group">
                             <label for="photo">Passport Photo</label>
-                            <input type="file" id="photo" name = "photo" class="form-control form-control-lg">
+                            <input type="file" id="photo" name = "photo_f" class="form-control form-control-lg" required="required">
                         </div>
                     </div>
                     <div class="row">

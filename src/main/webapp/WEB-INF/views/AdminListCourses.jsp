@@ -60,7 +60,7 @@
 						<!-- /.col -->
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="admindashboard">Home</a></li>
 								<li class="breadcrumb-item active">List Course</li>
 							</ol>
 						</div>
@@ -86,13 +86,12 @@
 										${courses.size()}
 									</h3>
 
-									<p>Course</p>
+									<p>Courses</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-stats-bars"></i>
+									<i class="ion ion-ios-book"></i>
 								</div>
-								<a href="listcourse" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								
 							</div>
 						</div>
 						<!-- ./col -->
@@ -103,12 +102,12 @@
 					<section class="content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="card">
 								 					<div class="card-header">
 								 								<a href="newcourse">Add New Course</a></div>			
 								<div class="card-body table-responsive p-0">
-									<table class="table table-hover text-nowrap">
+									<table class="table table-hover text-nowrap text-center">
 										<thead>
 											<tr>
 												<th>CourseId</th>
@@ -135,8 +134,15 @@
 													<td>${c.academicCycle}</td>
 													<td>${c.duration}</td>
 													<td>${c.developmentCost}</td>	
-													<td><a href="deletestudent?studentId=${c.courseId}">Delete</a>
-														</td>				
+													
+									
+								                  <td>
+								                  <a href="deletecourse?courseId=${c.courseId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a>
+								                  <a href="editcourse?courseId=${c.courseId}"><i class="ion ion-ios-compose fa-2x ml-2 text-success"></i></a>
+												  <a href="viewcourse?courseId=${c.courseId}"><i class="ion ion-ios-eye fa-2x ml-2 text-primary"></i></a>
+													
+								                  </td>
+																		
 													</tr>		
 											</c:forEach>
 	

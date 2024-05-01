@@ -71,27 +71,27 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="fName">First Name</label>
-                    <input type="text" id="fName" name="fName" class="form-control form-control-lg">
+                    <input type="text" id="fName" name="firstName" class="form-control form-control-lg" required="required">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="lName">Last Name</label>
-                    <input type="text" id="lName" name="lName" class="form-control form-control-lg">
+                    <input type="text" id="lName" name="lastName" class="form-control form-control-lg" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-control form-control-lg">
+                    <input type="email" id="email" name="email" class="form-control form-control-lg" required="required">
                 </div>
                 <div class="col-md-6 form-group">
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" class="form-control form-control-lg">
+                    <input type="text" id="subject" name="subject" class="form-control form-control-lg" required="required">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <label for="message">Message</label>
-                    <textarea  id="message" name="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea  id="message" name="message" cols="30" rows="10" class="form-control" required="required"></textarea>
                 </div>
             </div>
 

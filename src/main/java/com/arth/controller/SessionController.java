@@ -12,6 +12,7 @@ import com.arth.Entity.AdminEntity;
 import com.arth.Entity.StudentEntity;
 import com.arth.Service.MailerService;
 import com.arth.repository.AdminRepository;
+import com.arth.repository.MeritRepository;
 import com.arth.repository.StudentRepository;
 
 import jakarta.servlet.http.HttpSession;
@@ -34,6 +35,10 @@ public class SessionController {
 	BCryptPasswordEncoder passwordEncoder;
 	
 	@Autowired
+	MeritRepository meritRepo;
+	
+	
+	@Autowired
 	MailerService mailerService;
 
 	@GetMapping("/") //default page open
@@ -54,7 +59,7 @@ public class SessionController {
 		return "Signup";  
 	}
 	 
-	@PostMapping("/signup")
+	@PostMapping("/signup")  //if come a data by jsp then use PostMapping
 	public String  saveStudent(@Valid StudentEntity student,BindingResult result ,Model model) {
 		
 		if(result.hasErrors())
@@ -110,7 +115,7 @@ public class SessionController {
 		{
 			if(loggedInStudent != null)
 			{
-				session.setMaxInactiveInterval(60*10); //10 min -> no acitivity ->
+				session.setMaxInactiveInterval(60*60); //24 hr -> no acitivity ->
 				session.setAttribute("student", loggedInStudent); //set student into session 
 			
 			boolean answer = passwordEncoder.matches(se.getPassword(), loggedInStudent.getPassword());// true | false
@@ -125,12 +130,14 @@ public class SessionController {
 				} 
 				else if (loggedInStudent.getRoleId() == 2) {
 				// Student
+				
 				return "StudentDashboard";
 				}	
 			}
 			
 			else if (loggedInAdmin != null)
 			{
+				session.setMaxInactiveInterval(60*60); //24 hr -> no acitivity ->
 				session.setAttribute("admin", loggedInAdmin);
 				boolean answer = passwordEncoder.matches(ae.getPassword(), loggedInAdmin.getPassword());// true | false
 				
@@ -243,21 +250,11 @@ public class SessionController {
 		}
 		else
 		{
-			System.out.println("none");
-			return "OurCollege";
+		 	System.out.println("none");
+		 	return "OurCollege";
 		}
 			
 	}
-	
-//	@PostMapping("/saveuser")   //if come a data by jsp then use PostMapping
-//	public String saveuser(UserBean sb)
-//	{
-//		System.out.println(sb.getUserName());
-//		System.out.println(sb.getEmail());
-//		System.out.println(sb.getPassword());
-//		System.out.println("Saveuser");
-//		return "Home";
-//	}
 	
 	
 }

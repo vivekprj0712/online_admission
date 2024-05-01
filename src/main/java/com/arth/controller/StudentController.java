@@ -20,6 +20,7 @@ import com.arth.repository.StudentRepository;
 @Controller
 public class StudentController {
 
+	
 	@Autowired
 	StudentRepository studRepo;
 	
@@ -28,6 +29,8 @@ public class StudentController {
 	
 	@Autowired
 	BCryptPasswordEncoder bcrypt;
+	
+	
 	
 	@GetMapping("/newstudent")
 	public String newStudent(Model model)
@@ -41,7 +44,11 @@ public class StudentController {
 	public String saveStudent(StudentEntity se)
 	{
 		se.setPassword(bcrypt.encode(se.getPassword()));
+//		se.setView(false);
 		studRepo.save(se);
+		
+		
+		
 		return "redirect:/liststudent";
 		
 	}
@@ -51,13 +58,31 @@ public class StudentController {
 		
 		List<StudentEntity> students =studRepo.findAll();
 		model.addAttribute("studentList", students);
+//		List<StudentEntity> views = studRepo.findByViews(false);
+//		model.addAttribute("countStudent", views.size());
+//		model.addAttribute("views", views.size());
+//		  
+//		  for (int i = 0; i < views.size(); i++) {
+//				views.get(i).setView(true);
+//			}
+//			
+//		    studRepo.saveAll(views);
+		
 		return "ListStudent";
 	}
+	
 	@GetMapping("/deletestudent")
-	public String deleteStudent(@RequestParam Integer studentId)
+	public String deleteStudent(@RequestParam("studentId") Integer studentId)
 	{
 		studRepo.deleteById(studentId);
 		return "redirect:/liststudent";
 	}
 	
+	@GetMapping("/viewstudent")
+	public String viewStudent(@RequestParam("studentId") Integer studentId , Model model)
+	{
+		StudentEntity students = studRepo.findById(studentId).get();
+		model.addAttribute("student", students);
+		return "ViewStudent";
+	}
 }

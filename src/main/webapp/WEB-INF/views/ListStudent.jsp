@@ -12,15 +12,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-<!-- Ionicons -->
+<link rel="stylesheet"
+	href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet"
+	href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet"
+	href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
 <link rel="stylesheet"
 	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <!-- Tempusdominus Bbootstrap 4 -->
 <link rel="stylesheet"
 	href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+<!-- Ionicons -->
+<link rel="stylesheet"href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet"href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 <!-- iCheck -->
-<link rel="stylesheet"
-	href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet"href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- JQVMap -->
 <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
 <!-- Theme style -->
@@ -61,7 +72,7 @@
 						<!-- /.col -->
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="admindashboard">Home</a></li>
 								<li class="breadcrumb-item active">List Students</li>
 							</ol>
 						</div>
@@ -86,13 +97,12 @@
 								<div class="inner">
 									<h3>${studentList.size()}</h3>
 
-									<p>Student Registrations</p>
+									<p>Students</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-person-add"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								
 							</div>
 						</div>
 						
@@ -103,11 +113,12 @@
 					 	<section class="content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="card">
+							
 								 								
 								<div class="card-body table-responsive p-0">
-									<table class="table table-hover text-nowrap">
+									<table id="listtable" class="table table-hover text-nowrap text-center">
 										<thead>
 											<tr>
 												<th>StudentId</th>
@@ -132,7 +143,8 @@
 													<td>${s.password}</td>
 													<td>${s.contactNo}</td>
 													<td>${s.roleId}</td>	
-													<td><a href="deletestudent?studentId=${s.studentId}">Delete</a>
+													<td><a href="deletestudent?studentId=${s.studentId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a>
+														<a href="viewstudent?studentId=${s.studentId}"><i class="ion ion-ios-eye fa-2x ml-2 text-primary"></i></a>
 														</td>				
 													</tr>		
 											</c:forEach>
@@ -166,7 +178,7 @@
 	</div>
 	<!-- ./wrapper -->
 
-	<!-- jQuery -->
+<!-- jQuery -->
 	<script src="plugins/jquery/jquery.min.js"></script>
 	<!-- jQuery UI 1.11.4 -->
 	<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -194,13 +206,46 @@
 	<!-- Summernote -->
 	<script src="plugins/summernote/summernote-bs4.min.js"></script>
 	<!-- overlayScrollbars -->
+
+
+
+
+	<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 	<script
-		src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+		src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+	<script
+		src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+	<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+	<script src="plugins/jszip/jszip.min.js"></script>
+	<script src="plugins/pdfmake/pdfmake.min.js"></script>
+	<script src="plugins/pdfmake/vfs_fonts.js"></script>
+	<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+	<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+	<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+
+
+
+
+	<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 	<!-- AdminLTE App -->
 	<script src="dist/js/adminlte.js"></script>
 	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 	<script src="dist/js/pages/dashboard.js"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="dist/js/demo.js"></script>
+
+	<script type="text/javascript" class="col-md-12">
+		
+		$('#listtable').DataTable({
+			
+			"ordering" : true
+			
+		}).buttons().container().appendTo('#listtable_wrapper .col-md-12:eq(0)');
+	</script>
+
 </body>
 </html>

@@ -77,7 +77,7 @@
           </div>
             <div class="row">
                      <c:forEach items="${courses}" var="c">
-                <div class="col-lg-4 mt-3">
+                <div class="col-lg-4 mt-3 col-lg-4 col-md-6 mb-5 mb-lg-5">
                     <div class="course-1-item">
                         <figure class="thumnail">
 								
@@ -91,7 +91,7 @@
                         <h4>MinimumQualification:</h4>${c.minimumQualification}
                         <h4>Active:</h4>${c.active}
                         <h4>TotalSeats:</h4>${c.totalSeats}
-                        <h4>AcademicCycle:</h4>${c.academicCycle}
+                        <h4>AcademicCycle:</h4>${c.academicCycle} 
                         <h4>Duration:</h4>${c.duration}
                         <h4>DevelopmentCost:</h4>${c.developmentCost}
                         <h4>Rating:</h4>

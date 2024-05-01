@@ -26,10 +26,7 @@ public class TeacherController {
 
 	@GetMapping("/newteacher")
 	public String newTeacher(Model model) {
-//		List<RoleEntity> roles =roleRepo.findAll();
-//		model.addAttribute("roleList" , roles);
 
-//		model.addAttribute("teachers", new TeacherEntity());
 		return "NewTeacher";
 	}
 
@@ -91,5 +88,22 @@ public class TeacherController {
 		teacherRepo.deleteById(teacherId);
 		return "redirect:/listteacher";
 	}
+	
+	
+	@GetMapping("/editteacher")
+	public String editTeacher(@RequestParam("teacherId") Integer teacherId , Model model)
+	{
+		TeacherEntity teacher = teacherRepo.findById(teacherId).get();
+		model.addAttribute("editTeacher", teacher);		
+		return "EditTeacher";
+	}
 
+	@GetMapping("/viewteacher")
+	public String viewTeacher(@RequestParam("teacherId") Integer teacherId , Model model)
+	{
+		
+		TeacherEntity teachers = teacherRepo.findById(teacherId).get();
+		model.addAttribute("teacher", teachers);		
+		return "ViewTeacher";
+	}
 }

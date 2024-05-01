@@ -84,13 +84,12 @@
 								<div class="inner">
 									<h3>${roles.size()}</h3>
 
-									<p>List Roles</p>
+									<p>Roles</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-bag"></i>
+									<i class="ion ion-person"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
+								
 							</div>
 						</div>
 						<!-- ./col -->
@@ -109,7 +108,7 @@
 								 								<a href="newrole">Add New Role</a></div>
  
 								<div class="card-body table-responsive p-0">
-									<table class="table table-hover text-nowrap">
+									<table class="table table-hover text-nowrap text-center">
 										<thead>
 											<tr>
 												<th>RoleId</th>
@@ -123,9 +122,11 @@
 												<tr>
 													<td>${r.roleId}</td>
 													<td>${r.roleName}</td>
-													<td><a href="deleterole?roleId=${r.roleId}">Delete</a> | <a href="editrole?roleId=${r.roleId}">Edit</a></td>
-													
-													
+													<td>
+													<a href="deleterole?roleId=${r.roleId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a>  
+													<a href="editrole?roleId=${r.roleId}"><i class="ion ion-ios-compose fa-2x ml-2 text-success"></i></a>
+													<a href="viewrole?roleId=${r.roleId}"><i class="ion ion-ios-eye fa-2x ml-2 text-primary"></i></a>
+													</td>
 												</tr>
 											</c:forEach>
 										</tbody>

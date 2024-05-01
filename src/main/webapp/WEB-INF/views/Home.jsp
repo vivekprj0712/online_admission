@@ -37,11 +37,6 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div class="site-wrap">
-
-	   
-
-
-    
     <!-- ======= Header ======= -->
 	<jsp:include page="HomeHeader.jsp"></jsp:include>
 	<!-- End Header -->    
@@ -51,7 +46,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-              <h1>Academics University</h1>
+              <h1>Academics College</h1>
             </div>
           </div>
         </div>
@@ -83,80 +78,41 @@
           <div class="col-lg-9">
              <div class="section-heading">
               <h2 class="text-black">News &amp; Updates</h2>
-              <a href="#">Read All News</a>
+             
             </div>
             <div class="row">
               <div class="col-lg-6">
-                <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="dist/images/blog_large_1.jpg" alt="Image" class="img-fluid"></a>
+                <div class="post-entry-big horizontal d-flex mb-4">
+                <a href="news-single.html" class="img-link mr-4"><img src="dist/images/resultlogo.jpg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta"> 
-                      <a href="#">June 6, 2019</a>
+                      <a href="#">January 28, 2025</a>
                       <span class="mx-1">/</span>
-                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                      <a href="#">Results</a>, <a href="#">Updates</a>
                     </div>
-                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                    <h3 class="post-heading"><a href="#">HNGU M.Sc (CA & IT) Sem-V Exam 2024</a></h3>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="post-entry-big horizontal d-flex mb-4">
-                  <a href="news-single.html" class="img-link mr-4"><img src="dist/images/blog_1.jpg" alt="Image" class="img-fluid"></a>
+                  <a href="news-single.html" class="img-link mr-4"><img src="dist/images/eventlogo.jpeg" alt="Image" class="img-fluid"></a>
                   <div class="post-content">
                     <div class="post-meta">
-                      <a href="#">June 6, 2019</a>
+                      <a href="#">December 7, 2025</a>
                       <span class="mx-1">/</span>
-                      <a href="#">Admission</a>, <a href="#">Updates</a>
+                      <a href="#">Event</a>, <a href="#">Updates</a>
                     </div>
-                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
+                    <h3 class="post-heading"><a href="#">Kalpavriksha Youth Fest : 12-13 Dec 25 </a></h3>
                   </div>
                 </div>
 
-                <div class="post-entry-big horizontal d-flex mb-4">
-                  <a href="news-single.html" class="img-link mr-4"><img src="dist/images/blog_2.jpg" alt="Image" class="img-fluid"></a>
-                  <div class="post-content">
-                    <div class="post-meta">
-                      <a href="#">June 6, 2019</a>
-                      <span class="mx-1">/</span>
-                      <a href="#">Admission</a>, <a href="#">Updates</a>
-                    </div>
-                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
-                  </div>
-                </div>
-
-                <div class="post-entry-big horizontal d-flex mb-4">
-                  <a href="news-single.html" class="img-link mr-4"><img src="dist/images/blog_1.jpg" alt="Image" class="img-fluid"></a>
-                  <div class="post-content">
-                    <div class="post-meta">
-                      <a href="#">June 6, 2019</a>
-                      <span class="mx-1">/</span>
-                      <a href="#">Admission</a>, <a href="#">Updates</a>
-                    </div>
-                    <h3 class="post-heading"><a href="news-single.html">Campus Camping and Learning Session</a></h3>
-                  </div>
-                </div>
+                
+              
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="section-heading">
-              <h2 class="text-black">Campus Videos</h2>
-              <a href="#">View All Videos</a>
-            </div>
-            <a href="https://vimeo.com/45830194" class="video-1 mb-4" data-fancybox="" data-ratio="2">
-              <span class="play">
-                <span class="icon-play"></span>
-              </span>
-              <img src="dist/images/course_5.jpg" alt="Image" class="img-fluid">
-            </a>
-            <a href="https://vimeo.com/45830194" class="video-1 mb-4" data-fancybox="" data-ratio="2">
-                <span class="play">
-                  <span class="icon-play"></span>
-                </span>
-                <img src="dist/images/course_5.jpg" alt="Image" class="img-fluid">
-              </a>
           </div>
-        </div>
       </div>
     </div>
 

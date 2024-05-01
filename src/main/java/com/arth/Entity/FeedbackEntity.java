@@ -12,8 +12,8 @@ public class FeedbackEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer feedbackId;
-	private String fName;
-	private String lName;
+	private String firstName;
+	private String lastName;
 	private String email;
 	private String subject;
 	private String message;
@@ -24,17 +24,17 @@ public class FeedbackEntity {
 		this.feedbackId = feedbackId;
 	}
 	
-	public String getfName() {
-		return fName;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setfName(String fName) {
-		this.fName = fName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getlName() {
-		return lName;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setlName(String lName) {
-		this.lName = lName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getEmail() {
 		return email;

@@ -80,43 +80,26 @@
 							<!-- small box -->
 							<div class="small-box bg-info">
 								<div class="inner">
-									<h3>40</h3>
+									<h3>${roles.size()}</h3>
 
-									<p>List Role</p>
+									<p>Roles</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-bag"></i>
+									<i class="ion ion-person"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
+								<a href="listrole" class="small-box-footer">More info <i
 									class="fas fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 						<!-- ./col -->
-						<div class="col-lg-3 col-6">
-							<!-- small box -->
-							<div class="small-box bg-success">
-								<div class="inner">
-									<h3>
-										53<sup style="font-size: 20px">%</sup>
-									</h3>
-
-									<p>List Course</p>
-								</div>
-								<div class="icon">
-									<i class="ion ion-stats-bars"></i>
-								</div>
-								<a href="#" class="small-box-footer">More info <i
-									class="fas fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-						<!-- ./col -->
+						
 						<div class="col-lg-3 col-6">
 							<!-- small box -->
 							<div class="small-box bg-warning">
 								<div class="inner">
-									<h3>44</h3>
+									<h3>${students.size()}</h3>
 
-									<p>Student Registrations</p>
+									<p>Students</p>
 								</div>
 								<div class="icon">
 									<i class="ion ion-person-add"></i>
@@ -126,34 +109,38 @@
 							</div>
 						</div>
 						<!-- ./col -->
+						
 						<div class="col-lg-3 col-6">
 							<!-- small box -->
-							<div class="small-box bg-danger">
+							<div class="small-box bg-warning">
 								<div class="inner">
-									<h3>44</h3>
+									<h3>${admissions.size()}</h3>
 
-									<p>FeedBack</p>
+									<p>Admissions</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
+									<i class="ion ion-ios-paper"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
+								<a href="listadmission" class="small-box-footer">More info <i
 									class="fas fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 						<!-- ./col -->
+						
 						<div class="col-lg-3 col-6">
 							<!-- small box -->
-							<div class="small-box bg-blue">
+							<div class="small-box bg-success">
 								<div class="inner">
-									<h3>44</h3>
+									<h3>
+										${courses.size()}
+									</h3>
 
-									<p>List Contact</p>
+									<p>Courses</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
+									<i class="ion ion-ios-book"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
+								<a href="listcourse" class="small-box-footer">More info <i
 									class="fas fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
@@ -163,18 +150,84 @@
 							<!-- small box -->
 							<div class="small-box bg-purple">
 								<div class="inner">
-									<h3>44</h3>
+									<h3>${teachers.size()}</h3>
 
-									<p>List Teacher</p>
+									<p>Teachers</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-pie-graph"></i>
+									<i class="ion ion-ios-people"></i>
 								</div>
-								<a href="#" class="small-box-footer">More info <i
+								<a href="listteacher" class="small-box-footer">More info <i
 									class="fas fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 						<!-- ./col -->
+						
+						
+						<div class="col-lg-3 col-6">
+							<!-- small box -->
+							<div class="small-box bg-danger">
+								<div class="inner">
+									<h3>${feedbacks.size()}</h3>
+
+									<p>FeedBacks</p>
+								</div>
+								<div class="icon">
+									<i class="ion ion-chatbox"></i>
+								</div>
+								<a href="listfeedback" class="small-box-footer">More info <i
+									class="fas fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+						<!-- ./col -->
+						<div class="col-lg-3 col-6">
+							<!-- small box -->
+							<div class="small-box bg-blue">
+								<div class="inner">
+									<h3>${contacts.size()}</h3>
+
+									<p>Contacts</p>
+								</div>
+								<div class="icon">
+									<i class="ion ion-ios-telephone"></i>
+								</div>
+								<a href="listcontact" class="small-box-footer">More info <i
+									class="fas fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+						<!-- ./col -->
+
+						<div class="col-lg-3 col-6">
+							<!-- small box -->
+							<div class="small-box bg-gray">
+								<div class="inner">
+									<h3>${merits.size()}</h3>
+
+									<p>Merits</p>
+								</div>
+								<div class="icon">
+									<i class="ion ion-ios-book"></i>
+								</div>
+								<a href="listmerit" class="small-box-footer">More info <i
+									class="fas fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+						<!-- ./col -->
+						<div class="col-lg-3 col-6">
+							<!-- small box -->
+							<div class="small-box bg-pink">
+								<div class="inner">
+									<h3>${countconfirmAdmission}</h3>
+
+									<p>Confirm Admission</p>
+								</div>
+								<div class="icon">
+									<i class="ion ion-ios-checkmark"></i>
+								</div>
+								<a href="listconfirmadmission" class="small-box-footer">More info <i
+									class="fas fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
 						
 					</div>
 					<!-- /.row -->
@@ -204,7 +257,8 @@
 	<script>
 		$.widget.bridge('uibutton', $.ui.button)
 	</script>
-	<!-- Bootstrap 4 -->
+	
+		<!-- Bootstrap 4 -->
 	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- ChartJS -->
 	<script src="plugins/chart.js/Chart.min.js"></script>

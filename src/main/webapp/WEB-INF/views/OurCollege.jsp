@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-  <title>Course</title>
+  <title>Our College</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,7 +35,6 @@
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-  <div class="site-wrap">
 
 
 
@@ -43,6 +42,7 @@
 	<jsp:include page="HomeHeader.jsp"></jsp:include>
 	<!-- End Header -->
 
+  <div class="site-wrap">
     
     <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('dist/images/bg_1.jpg')">
         <div class="container">
@@ -173,7 +173,7 @@ The Department having the well furnished departmental library. It has the open a
                     </div>
                 </div>
         </div>
-    
+    </div>
 
    <!-- ======= Footer ======= -->
 	<jsp:include page="Footer.jsp"></jsp:include>

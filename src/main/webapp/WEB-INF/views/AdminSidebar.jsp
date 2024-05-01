@@ -29,10 +29,10 @@
 						 
 						<li class="nav-item"><a href="admindashboard"
 							class="nav-link"> <i class="nav-icon fas fa-th"></i>
-								<p>
-									Dashboard 
-								</p>
-						</a></li>
+								<p class="mr-5">
+									Dashboard
+								</p><span class="right badge badge-danger right ml-5">New</span>
+						</a> </li>
 						 
 								 
 						 
@@ -41,34 +41,47 @@
 				 
 						<li class="nav-header">Tools</li>
 						<li class="nav-item"><a href="listrole"
-							class="nav-link"> <i class="nav-icon far fa-calendar-alt"></i>
-								<p>
-									List Roles  
-								</p>
+							class="nav-link "> <i class="nav-icon ion ion-person"></i>
+								<p class="mr-5">Roles  </p><span class="badge badge-info right ml-5">${countRole}</span>
 						</a></li>
 						<li class="nav-item"><a href="liststudent"
-							class="nav-link"> <i class="nav-icon far fa-image"></i>
-								<p>List Students</p>
+							class="nav-link"> <i class="nav-icon ion ion-person-add"></i>
+								<p class="mr-5">Students</p><span class="badge badge-info right ml-5">${countStudent}</span>
 						</a></li>
 			
+						<li class="nav-item"><a href="listadmission"
+							class="nav-link"> <i class="nav-icon ion ion-ios-paper"></i>
+								<p class="mr-5">Admissions</p><span class="badge badge-info right ml-5">${countAdmission}</span>
+						</a></li>
+						
+			
 						<li class="nav-item"><a href="listcourse"
-							class="nav-link"> <i class="nav-icon far fa-image"></i>
-								<p>List Courses</p>
+							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
+								<p class="mr-5">Courses</p><span class="badge badge-info right ml-5">${countCourse}</span>
 						</a></li>
 			
 						<li class="nav-item"><a href="listteacher"
-							class="nav-link"> <i class="nav-icon far fa-image"></i>
-								<p>List Teachers</p>
+							class="nav-link"> <i class="nav-icon ion ion-ios-people"></i>
+								<p class="mr-5">Teachers</p><span class="badge badge-info right ml-5">${countTeacher}</span>
 						</a></li>
 						<li class="nav-item"><a href="listfeedback"
-							class="nav-link"> <i class="nav-icon far fa-image"></i>
-								<p>List FeedBack</p>
+							class="nav-link"> <i class="nav-icon ion ion-chatbox"></i>
+								<p class="mr-5">FeedBacks</p><span class="badge badge-info right ml-5">${countFeedback}</span>
 						</a></li>		
 						<li class="nav-item"><a href="listcontact"
-							class="nav-link"> <i class="nav-icon far fa-image"></i>
-								<p>List Contact</p>
+							class="nav-link"> <i class="nav-icon ion ion-ios-telephone"></i>
+								<p class="mr-5">Contacts</p><span class="badge badge-info right ml-5">${countContact}</span>
+						</a></li>
+						
+						<li class="nav-item"><a href="listmerit"
+							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
+								<p class="mr-5">Merits</p><span class="badge badge-info right ml-5">${countMerit}</span>
 						</a></li>						
 			 
+			 			<li class="nav-item"><a href="listconfirmadmission"
+							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
+								<p class="mr-5">Confirm Admission</p><span class="badge badge-info right ml-5">${countMerit}</span>
+						</a></li>	
 			
 			
 						<li class="nav-item"><a href="logout"
