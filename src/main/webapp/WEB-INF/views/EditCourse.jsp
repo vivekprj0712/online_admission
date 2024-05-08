@@ -152,7 +152,7 @@
 
 									<!-- /.card-body -->
 									<div class="card-footer">
-										<button type="submit" class="btn btn-info">Update Role</button>
+										<button type="submit" class="btn btn-info">Update Course</button>
 										<a href="listcourse" class="btn btn-default float-right">Cancel</a>
 										
 

@@ -63,6 +63,12 @@ public class PaymentEntity {
 	public void setAdmissionId(Integer admissionId) {
 		this.admissionId = admissionId;
 	}
+	public String getDelay() {
+		return delay;
+	}
+	public void setDelay(String delay) {
+		this.delay = delay;
+	}
 	
 	
 	

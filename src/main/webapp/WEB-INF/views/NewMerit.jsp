@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> COAT | Dashboard</title>
+<title> COAT | New Merit</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -55,13 +55,13 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1 class="m-0 text-dark">Add Teacher</h1>
+							<h1 class="m-0 text-dark">New Merit</h1>
 						</div>
 						<!-- /.col -->
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
 								<li class="breadcrumb-item"><a href="admindashboard">Home</a></li>
-								<li class="breadcrumb-item active">Add Teacher</li>
+								<li class="breadcrumb-item active">Add Merit</li>
 							</ol>
 						</div>
 						<!-- /.col -->
@@ -80,7 +80,7 @@
 
 							<div class="card card-info">
 								<div class="card-header">
-									<h3 class="card-title">Add Teacher</h3>
+									<h3 class="card-title">Add Merit</h3>
 								</div>
 								<!-- /.card-header -->
 								<!-- form start -->
@@ -97,6 +97,7 @@
 														<option value="-1">Select Round</option>
 														<option value="First Round">First Round</option>
 														<option value="Second Round">Second Round</option>
+														<option value="Second Round">Third  Round</option>
 													 </select>
 											</div>
 										</div>
@@ -184,19 +185,23 @@
 											</div>
 										</div>
 										
-										<div class="form-group row dropdown has-children">
-											
-											<label  class="col-sm-3 col-form-label">Select Course</label>
-                        					<select class="dropdown-toggle ml-3" name="courseId" required="required">	
-                        	
-													<option>--Select Course--</option>			
-													<c:forEach items="${courses}" var = "c">
+										
+										
+										<div class="form-group row">
+																				
+											<label for="roundTitle" class="col-sm-3 col-form-label">Select Course</label>
+											<div class="col-sm-10">
+												
+													<select name="courseId" class="form-control">
+														<option value="-1">Select Course</option>
+														<c:forEach items="${courses}" var = "c">
 													<option value = "${c.courseId}">${c.courseName}</option>		
 													</c:forEach>
-    					   					</select>			
-    					   								
-											
+													 </select>
+											</div>
 										</div>
+										
+										
 										
 									</div>
 									<!-- /.card-body -->

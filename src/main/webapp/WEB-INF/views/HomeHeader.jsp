@@ -43,7 +43,7 @@
                 <li class="has-children text-dark">
                  About Us 
                       <ul class="dropdown">
-                    <li><a href="listteacher">Testimonials</a></li>
+                    <li><a href="listteacher">Teachers</a></li>
                     <li><a href="ourcollege">Our College</a></li>
                   </ul>
                 </li>

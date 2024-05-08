@@ -76,7 +76,24 @@
             	
             	
             	<% int i = 1;%>
+            	
             	<c:forEach items="${finalmeritStudents}" var="f" >
+            	<c:if test="${merits.meritId == 1}">
+														
+            		<tr>
+            		<td><%=i%></td>
+            		<td>${f.admissionId}</td>
+            		<td>${f.lastName} ${f.firstName} ${f.middleName} </td>
+            		<td>${f.category}</td>
+            		<td>${f.perc_12th}</td>
+            		<%-- <td class="font-weight-bold"><a href="enrollment?admissionId=${f.admissionId}&meritId=${merits.meritId}" >Enrollment</a></td> --%>
+					<td class="font-weight-bold text-danger">Fell Late</td>
+					</tr>
+					
+					</c:if>
+					
+				<c:if test="${merits.meritId == 2}">
+														
             		<tr>
             		<td><%=i%></td>
             		<td>${f.admissionId}</td>
@@ -85,6 +102,9 @@
             		<td>${f.perc_12th}</td>
             		<td class="font-weight-bold"><a href="enrollment?admissionId=${f.admissionId}&meritId=${merits.meritId}" >Enrollment</a></td>
 					</tr>
+					
+					</c:if>		
+					
 					<% i = i+1; %>
             	</c:forEach>
             	
@@ -94,7 +114,7 @@
          
          
 		<div class="text-center ">
-             <a href="studentdashboard" class="btn btn-outline-danger btn-center mt-3">Cancel</a>
+             <a href="listmerit" class="btn btn-outline-danger btn-center mt-3">Cancel</a>
 		</div>
 			
          </div>

@@ -100,7 +100,7 @@
 										</thead>
 
 										<tbody>
-											<%! int i = 1;%>
+											<% int i = 1;%>
             								<c:forEach items="${finalmeritStudents}" var="f" >
             									<tr>
             									<td><%=i%></td>

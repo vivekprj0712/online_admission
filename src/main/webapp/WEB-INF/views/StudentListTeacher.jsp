@@ -8,7 +8,7 @@
 <html>
 
 <head>
-  <title>Testimonials</title>
+  <title>Teachers</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -67,7 +67,7 @@
       <div class="container">
         <a href="studentdashboard">Home</a>
         <span class="mx-3 icon-keyboard_arrow_right"></span>
-        <span class="current">Testimonials</span>
+        <span class="current">Teachers</span>
       </div>
     </div>
     
@@ -76,7 +76,7 @@
           <div class="row mb-5 justify-content-center text-center">
             <div class="col-lg-4 mb-5">
               <h2 class="section-title-underline mb-5">
-                <span>Testimonials</span>
+                <span>Teachers</span>
               </h2>
             </div>
           </div>

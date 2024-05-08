@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
-			<a href="index3.html" class="brand-link"> <img
+			<a href="admindashboard" class="brand-link"> <img
 				src="dist/images/hngu-logo.png" alt="AdminLTE Logo"
 				class="brand-image img-circle elevation-3" style="opacity: .8">
 				<span class="brand-text font-weight-light">COAT</span>
@@ -12,11 +12,11 @@
 				<!-- Sidebar user panel (optional) -->
 				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 					<div class="image">
-						<img src="dist/img/user2-160x160.jpg"
+							<img src="dist/img/user2-160x160.jpg"
 							class="img-circle elevation-2" alt="User Image">
 					</div>
 					<div class="info">
-						<a href="#" class="d-block">${admin.firstName} ${admin.lastName}</a>
+						<a href="adminmyprofile?adminId=${admin.adminId}" class="d-block">${admin.firstName} ${admin.lastName}</a>
 					</div>
 				</div>
 
@@ -31,7 +31,7 @@
 							class="nav-link"> <i class="nav-icon fas fa-th"></i>
 								<p class="mr-5">
 									Dashboard
-								</p><span class="right badge badge-danger right ml-5">New</span>
+								</p>
 						</a> </li>
 						 
 								 
@@ -42,45 +42,50 @@
 						<li class="nav-header">Tools</li>
 						<li class="nav-item"><a href="listrole"
 							class="nav-link "> <i class="nav-icon ion ion-person"></i>
-								<p class="mr-5">Roles  </p><span class="badge badge-info right ml-5">${countRole}</span>
+								<p class="mr-5">Roles  </p>
 						</a></li>
 						<li class="nav-item"><a href="liststudent"
 							class="nav-link"> <i class="nav-icon ion ion-person-add"></i>
-								<p class="mr-5">Students</p><span class="badge badge-info right ml-5">${countStudent}</span>
+								<p class="mr-5">Students</p>
 						</a></li>
 			
 						<li class="nav-item"><a href="listadmission"
 							class="nav-link"> <i class="nav-icon ion ion-ios-paper"></i>
-								<p class="mr-5">Admissions</p><span class="badge badge-info right ml-5">${countAdmission}</span>
+								<p class="mr-5">Admissions</p>
 						</a></li>
 						
 			
 						<li class="nav-item"><a href="listcourse"
 							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
-								<p class="mr-5">Courses</p><span class="badge badge-info right ml-5">${countCourse}</span>
+								<p class="mr-5">Courses</p>
 						</a></li>
 			
 						<li class="nav-item"><a href="listteacher"
 							class="nav-link"> <i class="nav-icon ion ion-ios-people"></i>
-								<p class="mr-5">Teachers</p><span class="badge badge-info right ml-5">${countTeacher}</span>
+								<p class="mr-5">Teachers</p>
 						</a></li>
 						<li class="nav-item"><a href="listfeedback"
 							class="nav-link"> <i class="nav-icon ion ion-chatbox"></i>
-								<p class="mr-5">FeedBacks</p><span class="badge badge-info right ml-5">${countFeedback}</span>
+								<p class="mr-5">FeedBacks</p>
 						</a></li>		
 						<li class="nav-item"><a href="listcontact"
 							class="nav-link"> <i class="nav-icon ion ion-ios-telephone"></i>
-								<p class="mr-5">Contacts</p><span class="badge badge-info right ml-5">${countContact}</span>
+								<p class="mr-5">Contacts</p>
 						</a></li>
 						
 						<li class="nav-item"><a href="listmerit"
 							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
-								<p class="mr-5">Merits</p><span class="badge badge-info right ml-5">${countMerit}</span>
+								<p class="mr-5">Merits</p>
 						</a></li>						
 			 
 			 			<li class="nav-item"><a href="listconfirmadmission"
-							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
-								<p class="mr-5">Confirm Admission</p><span class="badge badge-info right ml-5">${countMerit}</span>
+							class="nav-link"> <i class="nav-icon ion ion-ios-checkmark"></i>
+								<p class="mr-5">Confirm Admission</p>
+						</a></li>	
+						
+						<li class="nav-item"><a href="listpayment"
+							class="nav-link"> <i class="nav-icon ion ion-ios-checkmark"></i>
+								<p class="mr-5">Payments</p>
 						</a></li>	
 			
 			

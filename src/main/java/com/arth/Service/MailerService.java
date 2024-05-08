@@ -63,7 +63,7 @@ public class MailerService {
 		try {
 			MimeMessage message = new MimeMessage(session);
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-			message.setSubject("Admissions Upates");
+			message.setSubject("Admissions Updates");
 			message.setText(msg);
 			// send message
 			Transport.send(message);

@@ -95,7 +95,7 @@
 			
             </div>
             <div class="text-center ">
-             <a href="/" class="btn btn-outline-danger btn-center mt-3">Cancel</a>
+             <a href="listmerit	" class="btn btn-outline-danger btn-center mt-3">Cancel</a>
 		</div>
 			
          </div>

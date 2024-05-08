@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> COAT | Dashboard</title>
+<title> COAT | New Course</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -151,7 +151,7 @@
 									<!-- /.card-body -->
 									<div class="card-footer">
 										<button type="submit" class="btn btn-info">Save Course</button>
-										<a href="listrole" class="btn btn-default float-right">Cancel</a>
+										<a href="listcourse" class="btn btn-default float-right">Cancel</a>
 
 									</div>
 									<!-- /.card-footer -->

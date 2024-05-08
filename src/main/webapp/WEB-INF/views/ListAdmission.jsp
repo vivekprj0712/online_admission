@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> COAT | Dashboard</title>
+<title> COAT | List Admission</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -67,7 +67,7 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1 class="m-0 text-dark">Dashboard</h1>
+							<h1 class="m-0 text-dark">List of Admissions</h1>
 						</div>
 						<!-- /.col -->
 						<div class="col-sm-6">
@@ -93,7 +93,7 @@
 						<!-- ./col -->
 						<div class="col-lg-3 col-6">
 							<!-- small box -->
-							<div class="small-box bg-warning">
+							<div class="small-box bg-teal">
 								<div class="inner">
 									<h3>${admissions.size()}</h3>
 
@@ -166,12 +166,14 @@
 												<td>${a.country}</td>
 												<td>${a.perc_10th}</td>
 												<td>${a.perc_12th}</td>
-												<td> <img src= '${a.marksheet_10th}' alt="Image" class="img-fluid"></td>
-												<td> <img src= '${a.marksheet_12th}' alt="Image" class="img-fluid"></td>
+												<%-- <td> <img src= '${a.marksheet_10th}' alt="Image" class="img-fluid"></td>
+												<td> <img src= '${a.marksheet_12th}' alt="Image" class="img-fluid"></td> --%>
+												<td>${a.marksheet_10th}</td>
+												<td>${a.marksheet_12th}</td>
 												<td>${a.payment}</td>
 												<td>${a.status}</td>
-												<%-- <td>${a.photo}</td> --%>
-												<td> <img src= '${a.photo}' alt="Image" class="img-fluid"></td>
+												<td>${a.photo}</td>
+												<%-- <td> <img src= '${a.photo}' alt="Image" class="img-fluid"></td> --%>
 												<td>${a.courseId}</td> 
 
 													<td><a href="deleteadmission?admissionId=${a.admissionId}"><i class="ion ion-ios-trash fa-2x text-danger"></i></a>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> COAT | Dashboard</title>
+<title> COAT | New Teacher</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -54,7 +54,7 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1 class="m-0 text-dark">Add Teacher</h1>
+							<h1 class="m-0 text-dark">New Teacher</h1>
 						</div>
 						<!-- /.col -->
 						<div class="col-sm-6">
@@ -124,8 +124,8 @@
 									</div>
 									<!-- /.card-body -->
 									<div class="card-footer">
-										<button type="submit" class="btn btn-info">Save Course</button>
-										<a href="listrole" class="btn btn-default float-right">Cancel</a>
+										<button type="submit" class="btn btn-info">Save Teacher</button>
+										<a href="listteacher" class="btn btn-default float-right">Cancel</a>
 
 									</div>
 									<!-- /.card-footer -->

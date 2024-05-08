@@ -52,12 +52,7 @@ public class MeritController {
 	@PostMapping("/savemerit")
 	public String saveMerit(MeritEntity me) {
 		meritRepo.save(me);
-		
 
-		if(me.getRoundTitle().equals("Second Round")) {
-			
-		}
-		
 		return "redirect:/listmerit";
 
 	}
@@ -147,10 +142,15 @@ public class MeritController {
 	{
 		MeritEntity me = meritRepo.findById(meritId).get();
 		AdmissionEntity admissions = admissionRepo.findById(admissionId).get();
+		List<AdmissionEntity> confirmAdmissions = admissionRepo.findByConfirmAdmission("confirm");
 		SimpleDateFormat ft = new SimpleDateFormat("dd-MM-yyyy"); 
 		String str = ft.format(new java.util.Date()); 
-		
+	
 		model.addAttribute("date", str);
+		
+		if(confirmAdmissions.size() != 40)
+		{		
+		
 		if (session.getAttribute("student") != null) {
 			
 			model.addAttribute("admissions", admissions);
@@ -166,7 +166,16 @@ public class MeritController {
 			model.addAttribute("error", "Please Login First...!!");
 			return "Login";
 		}
+		
+		}
+		else
+		{
+			model.addAttribute("msg", "Sorry Admission is Full...");
+			return "AdmissionFull";
+		}
+		
 	}
+	
 	
 	
 	@GetMapping("/deletemerit")

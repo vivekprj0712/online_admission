@@ -65,5 +65,22 @@ public class PaymentController {
 		    
 		    return "GenerateEnrollmentReceipt";
 	}
+	
+	@GetMapping("/listpayment")
+	public String listPayment(PaymentEntity pe , Model model) {
+	
+	List<PaymentEntity> payments = 	paymentRepo.findAll();
+	model.addAttribute("payments", payments);
+		return "ListPayment";
+	}
+	
+	@GetMapping("/viewpayment")
+	public String viewPayment(@RequestParam("paymentId") Integer paymentId , Model model)
+	{
+		PaymentEntity payment = paymentRepo.findById(paymentId).get();
+		model.addAttribute("payment", payment);
+		return "ViewPayment";
+	}
+	
 
 }

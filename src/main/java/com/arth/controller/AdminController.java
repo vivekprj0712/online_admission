@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.arth.Entity.AdminEntity;
 import com.arth.Entity.AdmissionEntity;
@@ -15,6 +16,7 @@ import com.arth.Entity.ContactEntity;
 import com.arth.Entity.CourseEntity;
 import com.arth.Entity.FeedbackEntity;
 import com.arth.Entity.MeritEntity;
+import com.arth.Entity.PaymentEntity;
 import com.arth.Entity.RoleEntity;
 import com.arth.Entity.StudentEntity;
 import com.arth.Entity.TeacherEntity;
@@ -24,6 +26,7 @@ import com.arth.repository.ContactRepository;
 import com.arth.repository.CourseRepository;
 import com.arth.repository.FeedbackRepository;
 import com.arth.repository.MeritRepository;
+import com.arth.repository.PaymentRepository;
 import com.arth.repository.RoleRepository;
 import com.arth.repository.StudentRepository;
 import com.arth.repository.TeacherRepository;
@@ -63,6 +66,10 @@ public class AdminController {
 	@Autowired
 	MeritRepository meritRepo;
 	
+	@Autowired
+	PaymentRepository paymentRepo;
+	
+	
 	
 	@GetMapping("/newadmin")
 	public String NewAdmin()
@@ -93,7 +100,8 @@ public class AdminController {
 		  List<AdmissionEntity> admissions = admissionRepo.findAll();
 		  List<MeritEntity> merits = meritRepo.findAll();
 		  List<AdmissionEntity> confirmAdmissions = admissionRepo.findByConfirmAdmission("confirm");
-		
+		  List<PaymentEntity> peyment = paymentRepo.findAll();
+		  
 		  
 		  model.addAttribute("countconfirmAdmission", confirmAdmissions.size());
 		  model.addAttribute("roles", roles);
@@ -104,7 +112,7 @@ public class AdminController {
 		  model.addAttribute("contacts", contacts);
 		  model.addAttribute("admissions", admissions);
 		  model.addAttribute("merits", merits);
-		  
+		  model.addAttribute("payment", peyment.size());
 		    return "AdminDashboard";
 		}
 		else
@@ -112,5 +120,13 @@ public class AdminController {
 			model.addAttribute("error", "Please Loging First...!!");
 			return "Login";
 		}
+	}
+	
+	@GetMapping("adminmyprofile")
+	public String adminMyProfile(@RequestParam("adminId") Integer adminId , AdminEntity ae , Model model)
+	{
+		AdminEntity admin =  adminRepo.findById(adminId).get();
+		model.addAttribute("admin", admin);
+		return "AdminMyProfile";
 	}
 }	

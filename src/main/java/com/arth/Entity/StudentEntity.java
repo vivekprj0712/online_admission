@@ -25,7 +25,6 @@ public class StudentEntity {
 	private String confirmPassword; 
 	private Long contactNo;
 	private Integer otp;
-	private Boolean view; 
 	private Integer roleId;
 	
 	
@@ -69,12 +68,7 @@ public class StudentEntity {
 	public int getOtp() {
 		return otp;
 	}
-	public Boolean getView() {
-		return view;
-	}
-	public void setView(Boolean view) {
-		this.view = view;
-	}
+	
 	public void setOtp(Integer otp) {
 		this.otp = otp;
 	}
