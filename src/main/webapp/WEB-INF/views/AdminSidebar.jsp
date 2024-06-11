@@ -74,7 +74,7 @@
 						</a></li>
 						
 						<li class="nav-item"><a href="listmerit"
-							class="nav-link"> <i class="nav-icon ion ion-ios-book"></i>
+							class="nav-link"> <i class="nav-icon ion ion-ios-list"></i>
 								<p class="mr-5">Merits</p>
 						</a></li>						
 			 

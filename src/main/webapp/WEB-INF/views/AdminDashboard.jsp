@@ -206,7 +206,7 @@
 									<p>Merits</p>
 								</div>
 								<div class="icon">
-									<i class="ion ion-ios-book"></i>
+									<i class="ion ion-ios-list"></i>
 								</div>
 								<a href="listmerit" class="small-box-footer">More info <i
 									class="fas fa-arrow-circle-right"></i></a>

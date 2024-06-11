@@ -89,14 +89,14 @@ public class MeritController {
 		List<AdmissionEntity> scStudents = admissionRepo.findByAdmissionPerc("sc", me.getScCutoff(), me.getScQuota(),me.getRoundTitle());
 
 		
-		System.out.println("\ngeneral");
-		generalStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
-		System.out.println("\nobc");
-		obcStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
-		System.out.println("\nst");
-		stStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
-		System.out.println("\nsc");
-		scStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
+//		System.out.println("\ngeneral");
+//		generalStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
+//		System.out.println("\nobc");
+//		obcStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
+//		System.out.println("\nst");
+//		stStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
+//		System.out.println("\nsc");
+//		scStudents.stream().forEach(s->System.out.print(s.getAdmissionId()+" , "));
 			 
 
 		List<AdmissionEntity> finalMeritStudents = new ArrayList<>();

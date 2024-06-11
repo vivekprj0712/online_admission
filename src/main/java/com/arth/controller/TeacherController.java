@@ -39,13 +39,13 @@ public class TeacherController {
 			// profileImage the file to folder
 
 			try {
-				String masterPath = "C:\\Royal\\Internship with Tejas Sir\\24-college-online-admission\\src\\main\\resources\\static\\dist\\images\\";
+				String masterPath = "C:\\Royal\\Internship with Tejas Sir\\24-college-online-admission\\src\\main\\resources\\static\\dist\\teacher\\";
 
 				File img = new File(masterPath,file.getOriginalFilename());
 				FileUtils.writeByteArrayToFile(img, file.getBytes());
 				
 				
-				te.setProfileImagePath("dist/images/" + file.getOriginalFilename());
+				te.setProfileImagePath("dist/teacher/" + file.getOriginalFilename());
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
